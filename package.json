@@ -1,0 +1,26 @@
+{
+  "name": "live-reload-bp",
+  "version": "1.0.0",
+  "description": "This module is for the browser plugin «Live Reload Browser Page» — this is the browser plugin that reloads the browser page in real time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "live",
+    "reload",
+    "browser",
+    "page"
+  ],
+  "author": "Yuriy Svetlov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yuriy-Svetlov/live-reload-bp"
+  },
+  "homepage": "https://live-reload-browser-page.com",
+  "bugs": "https://github.com/Yuriy-Svetlov/live-reload-bp/issues",
+  "dependencies": {
+    "ws": "^7.3.1"
+  }
+}
