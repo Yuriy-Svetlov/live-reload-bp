@@ -27,7 +27,7 @@ npm i live-reload-bp --save-dev
 
 ##  How to use
 
-[Example of how to establish a connection to the plugin «**Live HTML Validator**»](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/%D1%81onnect_to_server)
+[Example of how to establish a connection to the plugin «**Live Reload Browser Page**»](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/%D1%81onnect_to_server)
 
 ```javascript
 
