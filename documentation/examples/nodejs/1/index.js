@@ -7,7 +7,7 @@ const
   liveReloadBP = require("live-reload-bp");
 
 const
-  dest = './index.html',
+  dest = './dest/**/*.(js|css|php|html)',
   liveReload = new liveReloadBP({
     host: '127.0.0.1',
 	  port: '8080'

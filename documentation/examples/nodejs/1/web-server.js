@@ -6,15 +6,16 @@ const
 const 
   app = express(),
   port = 3000,
-  host = 'localhost';
+  host = 'localhost',
+  webroot = '/dest/';
 
 
 module.exports = function(){
-  app.use(express.static(__dirname));
+  app.use(express.static(__dirname + webroot));
 
   app.get('/', function (req, res) {
 
-    res.sendFile('./index.html', {root: __dirname })
+    res.sendFile(webroot + 'index.html', {root: __dirname })
   });
 
   app.listen(port, host, () => console.log(`Open your browser: http://${host}:${port}`))
