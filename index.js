@@ -105,7 +105,7 @@ class Server{
 	}
 
 
-	reload_page(data = {}){
+	reloadPage(data = {}){
 		if(this.wss != undefined){
 	    this.wss.clients.forEach(function each(client) {
         
@@ -178,7 +178,7 @@ class Server{
 	}
 
 
-	live_alert(message){
+	liveAlert(message){
 		if(this.wss != undefined){
 		    this.wss.clients.forEach(function each(client) {
           
