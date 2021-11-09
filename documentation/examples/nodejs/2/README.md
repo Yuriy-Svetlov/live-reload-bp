@@ -1,8 +1,8 @@
-# Example - 1 (NodeJs) (live-reload-bp)
+# Example - 2. (NodeJs) (live-reload-bp)
 
-Test example of a simple use of **Live Reload Browser Page** and **Live Alert Browser Page**.
+Test example of how to use «*Partial reload*» in **Live Reload Browser Page**.
 
-**1.** Download or copy [example-1](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/nodejs/1)
+**1.** Download or copy [example-1](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/nodejs/2)
 
 **2.** Go to the directory with `package.json`.
 
@@ -27,9 +27,19 @@ Open your browser: http://localhost:3000
 
 
 **5.** 
-Set up a connection with the plugin. [Example of how to establish a connection to the plugin](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/%D1%81onnect_to_server)
+Set up a connection with the plugin. [Example of how to establish a connection to the plugin](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/%D1%81onnect_to_server) 
+
 
 **6.** 
-Change the file `dest/index.html` and your browser page should reload. If you change `tests/TestExampleLiveAlert.js` **Live Alert** panel will be called.
+Open the browser plugin **Live Reload Browser Page**, go to 'Local Setting', enable 'Partial reload' and click the "Save" button. Reconnect the browser plugin **Live Reload Browser Page**.
+
+
+**7.** 
+If you change the `dest/index.html`, `dest/1.js`, `dest/styles.css`, the reload browser page will be partial. If you change the `dest/2.js`, the reload browser page will not be partial. If you disable 'Partial reload' in the browser plugin **Live Reload Browser Page**the reload browser page will not be partial. 
+
+\* You may need to disable the cache in the Google Chrome browser developer console.
+
+[Disable cache](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/images/disable_cache.png) 
+
 
 **Congratulation!**
