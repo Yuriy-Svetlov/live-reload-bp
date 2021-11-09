@@ -2,7 +2,7 @@
 
 Test example of how to use «*Partial reload*» in **Live Reload Browser Page**.
 
-**1.** Download or copy [example-1](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/nodejs/2)
+**1.** Download or copy [example-2](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/nodejs/2)
 
 **2.** Go to the directory with `package.json`.
 
