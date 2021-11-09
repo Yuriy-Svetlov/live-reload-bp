@@ -35,11 +35,11 @@ Open the browser plugin **Live Reload Browser Page**, go to 'Local Setting', ena
 
 
 **7.** 
-If you change the `dest/index.html`, `dest/1.js`, `dest/styles.css`, the reload browser page will be partial. If you change the `dest/2.js`, the reload browser page will not be partial. If you disable 'Partial reload' in the browser plugin **Live Reload Browser Page**the reload browser page will not be partial. 
+If you change the `dest/index.html`, `dest/1.js`, `dest/styles.css`, the reload browser page will be partial. If you change the `dest/2.js`, the reload browser page will not be partial. If you disable 'Partial reload' in the browser plugin **Live Reload Browser Page** the reload browser page will not be partial. 
 
 \* You may need to disable the cache in the Google Chrome browser developer console.
 
-[Disable cache](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/images/disable_cache.png) 
+![Disable cache](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/images/disable_cache.png) 
 
 
 **Congratulation!**
