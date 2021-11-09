@@ -25,16 +25,17 @@ chokidar.watch(destLiveReload).on('change', (path_) => {
   let filename = path.basename(path_)
 
   if(filename === '1.js'){
-    // Partial reload of the browser page
-    // 
-    // API of browser plugin Live Reload Browser Page 
-    // https://live-reload-browser-page.com/documentation
-    // 
+    /* 
+      Partial reload of the browser page
+     
+      API of browser plugin Live Reload Browser Page 
+      https://live-reload-browser-page.com/documentation
+    */ 
     liveReload.reloadPage({
       action: 'page_reload',
       partial_reload: {
         tag: 'script',    
-        src: '/1.js', // '/index.js' or path_ (but probably you need to know a file extension and without `dest` in `dest\index.js`)
+        src: '/1.js',
         js: {
           //clear_obsolete_tags: ['style'],
           //resetHTML: false,
@@ -50,7 +51,7 @@ chokidar.watch(destLiveReload).on('change', (path_) => {
       action: 'page_reload',
       partial_reload: {
         tag: 'link',    
-        href: '/styles.css' // '/styles.css' or path_ (but probably you need to know a file extension and without `dest` in `dest\index.js`)
+        href: '/styles.css'
       }      
     });
   }else

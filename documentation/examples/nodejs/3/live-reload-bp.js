@@ -43,6 +43,13 @@ chokidar.watch(destLiveReload).on('change', (path_) => {
 });
 
 
+/* 
+  [Partial reload of the browser page]
+ 
+  API of browser plugin Live Reload Browser Page 
+  https://live-reload-browser-page.com/documentation
+  
+*/  
 function reloadJS(filepath){
   liveReload.reloadPage({
     action: 'page_reload',
