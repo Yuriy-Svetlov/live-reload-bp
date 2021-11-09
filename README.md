@@ -44,3 +44,6 @@ npm i live-reload-bp --save-dev
 ##  API
 
 
+##  Browser plugin API
+
+[API of browser plugin **Live Reload Browser Page**](https://live-reload-browser-page.com/documentation)
