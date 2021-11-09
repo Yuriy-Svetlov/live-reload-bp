@@ -31,3 +31,5 @@ Set up a connection with the plugin. [Example of how to establish a connection t
 
 **6.** 
 Change the file `dest/index.html` and your browser page should reload. If you change `tests/TestExampleLiveAlert.js` **Live Alert** panel will be called.
+
+**Congratulation!**
