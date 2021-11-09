@@ -20,6 +20,13 @@ chokidar.watch(dest).on('change', (path) => {
   console.log('file changed');
 
   liveReload.reloadPage();
+
+  /* for
+  liveReload.liveAlert([
+    { label: 'My label-1', message: 'My message-1.'},
+    { label: 'My label-2', message: 'My message-2.'},
+  ]);
+  */
 });
 
 webServer();
