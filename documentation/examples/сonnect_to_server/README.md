@@ -21,7 +21,7 @@ After you have started the server, you can connect to it.
 ![Live Reload Browser Page](https://raw.githubusercontent.com/Yuriy-Svetlov/live-reload-bp/master/documentation/examples/сonnect_to_server/images/3.png)
 
 
-**6.** (Optional) Do not turn it on now. First, we recommend that you try Live Reload Browser Page and Live Alert Browser Page. Go to **Live HTML Validator**. Turn on 'Visual notification' or 'Sound notification' or both. If you want automatic HTML validation turn on 'Auto validation'. Back to the main menu. See [live-html-validator](https://github.com/Yuriy-Svetlov/live-html-validator).
+**6.** (Optional) Do not turn it on now. First, we recommend that you try **Live Reload Browser Page** and **Live Alert Browser Page**. Go to **Live HTML Validator**. Turn on 'Visual notification' or 'Sound notification' or both. If you want automatic HTML validation turn on 'Auto validation'. Back to the main menu. See [live-html-validator](https://github.com/Yuriy-Svetlov/live-html-validator).
 
 ![Live Reload Browser Page](https://raw.githubusercontent.com/Yuriy-Svetlov/live-reload-bp/master/documentation/examples/сonnect_to_server/images/4.png)
 
