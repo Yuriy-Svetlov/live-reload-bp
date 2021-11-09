@@ -39,7 +39,7 @@ If you change the `dest/index.html`, `dest/1.js`, `dest/styles.css`, the reload 
 
 \* You may need to disable the cache in the Google Chrome browser developer console.
 
-![Disable cache](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/images/disable_cache.png) 
+![Disable cache](https://raw.githubusercontent.com/Yuriy-Svetlov/live-reload-bp/main/images/disable_cache.png) 
 
 
 **Congratulation!**
