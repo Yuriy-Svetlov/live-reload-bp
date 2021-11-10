@@ -13,3 +13,5 @@ Simple use of **Live Reload Browser Page**.
 * [example-2](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/gulp/2)
 Simple use of **Live Reload Browser Page** and **Live Alert Browser Page**.
 
+* [example-3](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/gulp/3)
+How to use «*Partial reload*» in **Live Reload Browser Page**.
