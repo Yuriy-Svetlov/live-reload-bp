@@ -21,7 +21,7 @@ In the console you should see the following message:
 
 > Server started | host: 127.0.0.1 | port: 8080
 
-**4.** Set up a connection with the plugin. [Example of how to establish a connection to a plugin](https://github.com/Yuriy-Svetlov/live-alert-bp/tree/master/documentation/examples/%D1%81onnect_to_server)
+**4.** Set up a connection with the plugin. [Example of how to establish a connection to a plugin](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/%D1%81onnect_to_server)
 
 
 **5.** Change a file `src/scss/1.scss`, `src/scss/_1.scss` or `src/scss/2.scss`. The browser page will reload and you will hear a sound and a visual notification. If you make a syntax error, the **Live Alert** panel will open (if you have enabled **Live Alert**).
