@@ -30,7 +30,25 @@ npm i live-reload-bp --save-dev
 [Example of how to establish a connection to the plugin «**Live Reload Browser Page**»](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/%D1%81onnect_to_server)
 
 ```javascript
+const 
+  liveReload = require("live-reload-bp");
 
+
+const  
+  liveReloadMain = new liveReload({
+    host: '127.0.0.1',
+    port: '8080'
+  });
+
+// Run Server
+liveReloadMain.run();
+
+console.log('Within 10 seconds, you need to connect to this server using the browser plugin «Live Reload Browser Page».');
+
+setTimeout(function(){
+  // Full reload of the browser page
+  liveReloadMain.reloadPage();
+}, 10000);
 ```
 
 ##  Examples:
