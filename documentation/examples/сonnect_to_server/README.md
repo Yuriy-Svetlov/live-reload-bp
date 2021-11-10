@@ -1,8 +1,8 @@
 # Connect to server (Live Reload Browser Page)
 
-After you have started the server, you can connect to it. 
+&#9888; First of all, we recommend that you disable all browser plug-ins that can affect on **Live Reload Browser Page**.
 
-! First of all, we recommend that you disable all browser plug-ins that can affect **Live Reload Browser Page**.
+After you have started the server, you can connect to it. 
 
 ## Example:
 

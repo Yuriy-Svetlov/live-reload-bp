@@ -11,14 +11,9 @@ const
   webServer = require('./web-server');
 
 const 
-  cssMain1Watch = 'src/scss/main-1/*.scss',
-  cssMain1Src = ['src/scss/main-1/*.scss'],
-  cssMain1Dest = 'dest/css';
-
-const 
-  cssMain2Watch = 'src/scss/main-2/*.scss',
-  cssMain2Src = ['src/scss/main-2/*.scss'],
-  cssMain2Dest = 'dest/css';
+  cssWatch = 'src/scss/*.scss',
+  cssSrc = ['src/scss/*.scss'],
+  cssDest = 'dest/css';
 
 const 
   htmlWatch = 'src/*.html',
@@ -37,25 +32,14 @@ const
   });
 
 
-function cssMain1() {
-  return gulp.src(cssMain1Src)
+function css() {
+  return gulp.src(cssSrc)
   .pipe(plumber())        
   .pipe(gulpSass().on('error', gulpSass.logError))   
   .pipe(postcss([
-    cssnano({zindex: false, reduceIdents: false})
+      cssnano({zindex: false, reduceIdents: false})
   ]))     
-  .pipe(gulp.dest(cssMain1Dest));
-}
-
-
-function cssMain2() {
-  return gulp.src(cssMain2Src)
-  .pipe(plumber())        
-  .pipe(gulpSass().on('error', gulpSass.logError))   
-  .pipe(postcss([
-    cssnano({zindex: false, reduceIdents: false})
-  ]))     
-  .pipe(gulp.dest(cssMain2Dest));
+  .pipe(gulp.dest(cssDest));
 }
 
 
@@ -87,25 +71,12 @@ function js(){
 }
 
 
-function reloadCssMain1(cb){
+function reloadCss(cb){
   liveReload.reloadPage({
     action: 'page_reload',
     partial_reload: {
       tag: 'link',    
       href: '/css/1.css'
-    }      
-  });
-
-  cb();
-}
-
-
-function reloadCssMain2(cb){
-  liveReload.reloadPage({
-    action: 'page_reload',
-    partial_reload: {
-      tag: 'link',    
-      href: '/css/2.css'
     }      
   });
 
@@ -152,25 +123,17 @@ function watch(){
   liveReload.run();
   webServer();
 
-  // CSS
-  gulp.watch(cssMain1Watch, gulp.series(cssMain1, reloadCssMain1));
-  gulp.watch(cssMain2Watch, gulp.series(cssMain2, reloadCssMain2));
-
-  // HTML
+  gulp.watch(cssWatch, gulp.series(css, reloadCss));
   gulp.watch(htmlWatch, gulp.series(html, reloadHtml));
-
-  // JS
   gulp.watch(jsWatch, gulp.series(js, reloadJs));
 }
 
 
-exports.cssMain1 = cssMain1;
-exports.cssMain2 = cssMain2;
+exports.css = css;
 exports.html = html;
 exports.js = js;
 exports.watch = watch;
-exports.reloadCssMain1 = reloadCssMain1;
-exports.reloadCssMain2 = reloadCssMain2;
+exports.reloadCss = reloadCss;
 exports.reloadJs = reloadJs;
 exports.reloadHtml = reloadHtml;
-exports.start = gulp.series(cssMain1, cssMain2, html, js, watch);
+exports.start = gulp.series(css, html, js, watch);
