@@ -33,7 +33,6 @@ npm i live-reload-bp --save-dev
 const 
   liveReload = require("live-reload-bp");
 
-
 const  
   liveReloadMain = new liveReload({
     host: '127.0.0.1',
