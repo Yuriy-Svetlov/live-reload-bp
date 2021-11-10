@@ -2,7 +2,6 @@
 const 
   gulp = require('gulp'),
   liveReloadBP = require("live-reload-bp"),
-  liveAlertFormatterSass = require("live-alert-bp-formatter-sass"),
   plumber = require('gulp-plumber'),
   gulpSass = require('gulp-sass'),
   postcss = require('gulp-postcss'),
@@ -23,51 +22,19 @@ const
 
 function css() {
   return gulp.src(cssSrc)
-    .pipe(plumber({errorHandler: onError}))        
-    .pipe(gulpSass().on('error', gulpSass.logError))   
-    .pipe(postcss([
-        cssnano({zindex: false, reduceIdents: false})
-    ]))     
-    .pipe(gulp.dest(cssDest));
+  .pipe(plumber())        
+  .pipe(gulpSass().on('error', gulpSass.logError))   
+  .pipe(postcss([
+      cssnano({zindex: false, reduceIdents: false})
+  ]))     
+  .pipe(gulp.dest(cssDest));
 }
 
 
 function reloadPage(cb){
-    liveReload.reloadPage();
-    liveReload.resetError();
+  liveReload.reloadPage();
 
   cb();
-}
-
-
-function onError(err){
-  if(liveReload.hasError() === false){
-    if(err.plugin === 'gulp-sass'){
-
-      // Without Sass formatter
-      /*
-      liveReload.liveAlert([
-        { label: 'File', message: err.file },
-        { label: 'Message', message: err.message }
-      ]);
-      */
-      
-
-      /*
-        With Sass formatter
-
-        # Formaters
-        https://github.com/Yuriy-Svetlov/live-alert-bp#formaters
-      */
-      
-      liveReload.liveAlert(
-        liveAlertFormatterSass(err)
-      );
-      
-    }
-  }
-
-  this.emit('end');
 }
 
 

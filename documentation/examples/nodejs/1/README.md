@@ -30,6 +30,6 @@ Open your browser: http://localhost:3000
 Set up a connection with the plugin. [Example of how to establish a connection to the plugin](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/%D1%81onnect_to_server)
 
 **6.** 
-Change the file `dest/index.html` and your browser page should reload. If you change `tests/TestExampleLiveAlert.js` **Live Alert** panel will be called.
+Change the file `dest/index.html` and your browser page should reload. If you change `tests/TestExampleLiveAlert.js` **Live Alert** panel will be called  (if you have enabled **Live Alert**).
 
 **Congratulation!**
