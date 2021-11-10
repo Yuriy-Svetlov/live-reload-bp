@@ -37,6 +37,7 @@ class Server{
 		this.wss = null;
 		this.ssl = options.ssl;
 		debug = options.debug;
+		this.error = false;
 	}
 
 
@@ -106,7 +107,7 @@ class Server{
 
 
 	reloadPage(data = {}){
-		if(this.wss != undefined){
+		if(this.hasError() != true && this.wss != undefined){
 	    this.wss.clients.forEach(function each(client) {
         
         if(client.readyState === WebSocket.OPEN) {
@@ -121,9 +122,8 @@ class Server{
           }
         }
 
-	    });	
-		}	
-
+	    });
+		}
 
 		function get_options__partial_reload(options){
 			if(options == undefined){
@@ -179,21 +179,35 @@ class Server{
 
 
 	liveAlert(message){
-		if(this.wss != undefined){
-		    this.wss.clients.forEach(function each(client) {
-          
-          if(client.readyState === WebSocket.OPEN) {
-            client.send(JSON.stringify({
-              action: 'live_alert',
-              message: message
-            }));
+		if(message.length > 0){
+			this.error = true;
 
-            console.log('[Live Alert] ' + getDateTime());
-          }
-          
+			if(this.wss != undefined){
+		    this.wss.clients.forEach(function each(client) {
+	        
+	        if(client.readyState === WebSocket.OPEN) {
+	          client.send(JSON.stringify({
+	            action: 'live_alert',
+	            message: message
+	          }));
+
+	          console.log('[Live Alert] ' + getDateTime());
+	        }
+	        
 		    });	
-		}		
+			}	
+		}	
 	}
+
+
+  hasError(){
+		return this.error;
+  }
+
+
+  resetError(){
+		this.error = false;
+  }
 
 }
 
