@@ -9,3 +9,4 @@ const
 $script1.innerHTML = '<div style="width: 30%;" class="script1"></div>';
 $script2.innerHTML = '<div style="width: 50%;" class="script2"></div>';
 
+

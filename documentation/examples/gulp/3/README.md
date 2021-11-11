@@ -19,9 +19,12 @@ In the console you should see the following message:
 
 > Server started | host: 127.0.0.1 | port: 8080
 
-**4.** Set up a connection with the plugin. [Example of how to establish a connection to a plugin](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/%D1%81onnect_to_server)
+**4.** 
+Open your browser: http://localhost:3000
 
-**5.** 
+**5.** Set up a connection with the plugin. [Example of how to establish a connection to a plugin](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/%D1%81onnect_to_server)
+
+**6.** 
 If you change the `src/index.html`, `src/scss/main-1/1.scss`, `src/scss/main-1/_1.scss`, `src/scss/main-2/2.scss` or `src/js/1.js`, reload of the browser page will be partial. If you change the `src/js/2.js`, the browser page will not be reload. If you disable 'Partial reload' in the browser plugin **Live Reload Browser Page** will be full reload of the browser page. 
 
 \* You may need to disable the cache in the Google Chrome browser developer console.
