@@ -22,3 +22,6 @@ Shown here is the automatic indication of file paths to be reloaded.
 
 * [example-5](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/gulp/5)
 Simple use of **Live Reload Browser Page**. Example with Old pattern Gulp.
+
+* [example-6](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/gulp/6)
+Alternative example use of **Live Reload Browser Page**.
