@@ -7,4 +7,4 @@
 ## Examples
 
 * [example-1](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/webpack/1)
-
+Simple use of **Live Reload Browser Page**.
