@@ -32,15 +32,20 @@ gulp.task('css', function() {
 
 
 function onError(err){
-  liveReload.setError();
+  /* Here can be used: 
+    https://github.com/Yuriy-Svetlov/live-alert-bp
+
+    In the Pro version of «Live Reload Browser Page - Pro», all plugins are already built in.
+  */
+
+  liveReload.setError(); // This usage is optional. You can not use this, if you want your page to reload anyway.
 
   this.emit('end');
 }
 
 
 gulp.task('reloadPage', function(ok) {
-
-  if(liveReload.hasError() === false){
+  if(liveReload.hasError() === false){ // This usage is optional. You can not use this, if you want your page to reload anyway.
     liveReload.reloadPage();
   }
 

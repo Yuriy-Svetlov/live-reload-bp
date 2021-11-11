@@ -19,3 +19,6 @@ How to use «*Partial reload*» in **Live Reload Browser Page**.
 * [example-4](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/gulp/4)
 How to use «*Partial reload*» in **Live Reload Browser Page**.
 Shown here is the automatic indication of file paths to be reloaded.
+
+* [example-5](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/gulp/5)
+Example with Old pattern Gulp.

@@ -22,7 +22,7 @@ const
 
 function css() {
   return gulp.src(cssSrc)
-  .pipe(plumber())        
+  .pipe(plumber({errorHandler: onError}))        
   .pipe(gulpSass().on('error', gulpSass.logError))   
   .pipe(postcss([
       cssnano({zindex: false, reduceIdents: false})
@@ -31,10 +31,27 @@ function css() {
 }
 
 
-function reloadPage(cb){
-  liveReload.reloadPage();
+function onError(err){
+  /* Here can be used: 
+    https://github.com/Yuriy-Svetlov/live-alert-bp
 
-  cb();
+    In the Pro version of «Live Reload Browser Page - Pro», all plugins are already built in.
+  */
+
+  liveReload.setError();  // This usage is optional. You can not use this, if you want your page to reload anyway.
+
+  this.emit('end');
+}
+
+
+function reloadPage(ok){
+  if(liveReload.hasError() === false){ // This usage is optional. You can not use this, if you want your page to reload anyway.
+    liveReload.reloadPage();
+  }
+
+  liveReload.resetError();
+
+  ok();
 }
 
 
