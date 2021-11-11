@@ -1,6 +1,6 @@
 # Example - 5 (Gulp) (live-reload-bp)
 
-Example with Old pattern Gulp.
+Simple use of **Live Reload Browser Page**. Example with Old pattern Gulp.
 
 **1.** Download or copy [example-5](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/gulp/5)
 
