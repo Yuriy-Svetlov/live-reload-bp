@@ -19,6 +19,6 @@ In the console you should see the following message:
 
 **4.** Set up a connection with the plugin. [Example of how to establish a connection to a plugin](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/%D1%81onnect_to_server)
 
-**5.** Change a file `src/scss/1.scss`, `src/scss/_1.scss` or `src/scss/2.scss`. The browser page will reload and you will hear a sound and a visual notification.
+**5.** Change the file `src/scss/1.scss`, `src/scss/_1.scss` or `src/scss/2.scss`. The browser page will reload and you will hear a sound and a visual notification.
 
 **Congratulation!**
