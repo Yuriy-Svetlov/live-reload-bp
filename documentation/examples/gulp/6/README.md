@@ -1,6 +1,6 @@
 # Example - 6 (Gulp) (live-reload-bp)
 
-Alternative example use of **Live Reload Browser Page**.
+Alternative example of using **Live Reload Browser Page**.
 
 **1.** Download or copy [example-6](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/gulp/6)
 
