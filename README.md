@@ -54,7 +54,7 @@ setTimeout(function(){
 
 * [NodeJs](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/nodejs) (To better understand how to use this tool, it is recommended that you Get Started.)
 * [Gulp](https://github.com/Yuriy-Svetlov/live-reload-bp/blob/main/documentation/examples/gulp/README.md)
-* [Webpack](#)
+* [Webpack](https://github.com/Yuriy-Svetlov/live-reload-bp/blob/main/documentation/examples/webpack/README.md)
 * [Grunt](#)
 
 
