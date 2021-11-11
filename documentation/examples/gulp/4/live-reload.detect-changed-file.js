@@ -37,7 +37,7 @@ chokidar.watch(pathWatch).on('change', (path) => {
   // Replace extension for .scss
   modPath = modPath.replace(/\.scss$/, '.css');
 
-  console.log(modPath);
+  //console.log(modPath);
 });
 
 

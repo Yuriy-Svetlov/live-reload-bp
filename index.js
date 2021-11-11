@@ -209,6 +209,11 @@ class Server{
 		this.error = false;
   }
 
+
+  setError(){
+		this.error = true;
+  }
+
 }
 
 module.exports = Server;

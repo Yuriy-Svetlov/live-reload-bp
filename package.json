@@ -1,6 +1,6 @@
 {
   "name": "live-reload-bp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This module is for the browser plugin «Live Reload Browser Page» — this is the browser plugin that reloads the browser page in real time.",
   "main": "index.js",
   "scripts": {
