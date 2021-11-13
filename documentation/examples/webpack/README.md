@@ -14,3 +14,6 @@ How to use «*Partial reload*» in **Live Reload Browser Page**.
 
 * [example-3](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/webpack/3)
 Using **Live Reload Browser Page** and **Live Alert Browser Page**.
+
+* [example-4](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/webpack/4)
+How to use «*Partial reload*» in **Live Reload Browser Page** and example use `execute_before`.
