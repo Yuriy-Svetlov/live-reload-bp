@@ -25,3 +25,6 @@ Simple use of **Live Reload Browser Page**. Example with Old pattern Gulp.
 
 * [example-6](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/gulp/6)
 Alternative example of using **Live Reload Browser Page**.
+
+* [example-7](https://github.com/Yuriy-Svetlov/live-reload-bp/tree/main/documentation/examples/gulp/7)
+How to use «*Partial reload*» in **Live Reload Browser Page** and example use `execute_before`.
