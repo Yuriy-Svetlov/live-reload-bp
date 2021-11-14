@@ -2,9 +2,9 @@
 
 const
   liveReloadBP = require("live-reload-bp"),
-  sass = require('sass'),
   liveAlertFormatterStylelint = require("live-alert-bp-formatter-stylelint"),
   liveAlertFormatterSass = require("live-alert-bp-formatter-sass"),
+  liveAlertFormatterJShint = require("live-alert-bp-formatter-jshint"),
   webServer = require('./web-server');
 
 var
@@ -22,10 +22,52 @@ module.exports = function(grunt) {
           host: '127.0.0.1',
           port: '8080'
         }
-      },    
+      }, 
+
       all: {
+
         options: {}
       },
+
+      css: {
+        options: {
+          action: 'page_reload',
+          partial_reload: { 
+              tag: 'link',
+              href: '/css/main.css'
+          }          
+        }
+      },
+
+      js: {
+        options: {
+          action: 'page_reload',
+          partial_reload: { 
+            tag: 'script',
+            src: '/js/index.js',
+            //execute_before: before,
+            js: {
+              //clear_obsolete_tags: ['style'],
+              //resetHTML: true,
+              use_method_1: {
+                send_event_onload: false
+              }        
+            }
+          }          
+        }
+      },
+
+      html: {
+        options: {
+          action: 'page_reload',
+          partial_reload: { 
+            tag: 'html',
+            html: {
+              force_load_images: false
+            }
+          }          
+        }
+      }
     },
 
     stylelint: {
@@ -41,7 +83,6 @@ module.exports = function(grunt) {
     sass: {
       options: {
         onError: function(error){
-
           /*
             # Formaters
             https://github.com/Yuriy-Svetlov/live-alert-bp#formaters
@@ -83,16 +124,55 @@ module.exports = function(grunt) {
       }
     },
 
+    jshint: {
+        options: {
+          jshintrc: true,
+          reporter: require('grunt-jshint-event-reporter')
+        },
+        all: ['src/js/**/*.js']
+    },
+
+    uglify: {
+        build777: {
+          files: [{
+            expand: true,
+            cwd: 'src',
+            src: 'js/**/*.js',
+            dest: 'dest'
+          }]
+        }
+    },
+
+    htmlmin: {
+      options: {
+        removeComments: true,
+        collapseWhitespace: true
+      },
+      index: {
+        files: {
+          'dest/index.html': 'src/index.html'
+        }
+      }
+    },
+
     watch: {
       options: {
         spawn: false 
         // It is recommended to disable `false` or not use 'grunt-contrib-watch' 
         // or perhaps even Grunt. Because it works very very slowly.
       },
-      js: {
+      css: {
           files: ['src/scss/**/*.scss'],
-          tasks: ['stylelint', 'sass:all', 'postcss:css', 'liveReload:all']
-      },       
+          tasks: ['stylelint', 'sass:all', 'postcss:css', 'liveReload:css']
+      },  
+      js: {
+          files: ['src/**/*.js'],
+          tasks: ['jshint:all', 'uglify', 'liveReload:js']
+      },
+      html: {
+          files: ['src/**/*.html'],
+          tasks: ['htmlmin:index', 'liveReload:html']
+      },
     },
 
   });
@@ -101,6 +181,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-stylelint');
   grunt.loadNpmTasks('grunt-sass-scss');
   grunt.loadNpmTasks('@lodder/grunt-postcss');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   // Register Task
   grunt.registerTask('start', ['liveReload:run', 'watch']);
@@ -112,8 +195,9 @@ module.exports = function(grunt) {
         liveReload.run();
     }else{
       //if(grunt.fail.errorcount === 0 && grunt.fail.warncount === 0) {
+        console.log(this.data.options);
         liveReload.resetError();
-        liveReload.reloadPage();
+        liveReload.reloadPage(this.data.options);
       //}
     }
 
@@ -122,16 +206,27 @@ module.exports = function(grunt) {
   });
 
 
-  /*
-    # Formaters
-    https://github.com/Yuriy-Svetlov/live-alert-bp#formaters
-  */
   function formatterStylelint(results, returnValue) {
+    /*
+      # Formaters
+      https://github.com/Yuriy-Svetlov/live-alert-bp#formaters
+    */
     liveReload.liveAlert(
       liveAlertFormatterStylelint(results)
     ); 
 
     return results;
   }
+
+
+  grunt.event.on('jshint-error', function(err){
+    /*
+      # Formaters
+      https://github.com/Yuriy-Svetlov/live-alert-bp#formaters
+    */
+    liveReload.liveAlert(
+      liveAlertFormatterJShint(err)
+    );
+  });
 
 }
