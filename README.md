@@ -106,7 +106,7 @@ Call the alert panel on a web page.
 
 \* The method in [live-alert-bp](https://github.com/Yuriy-Svetlov/live-alert-bp) has other name.
 
-`message` must be in the format (you can also look at [Browser plugin API](https://live-reload-browser-page.com/documentation)):
+`message` must be in the format (you can also look at [Browser plugin **Live Alert Browser Page** API](https://live-alert-browser-page.com/documentation)):
 
 ```js
 [
