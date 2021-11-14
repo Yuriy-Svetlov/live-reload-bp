@@ -60,6 +60,82 @@ setTimeout(function(){
 
 ##  API
 
+### Instance options
+
+`const liveReload = new LiveReload({options});`
+
+#### options.host
+* Type: `String`
+* Default value: `127.0.0.1`
+
+#### options.port
+* Type: `String|Integer`
+* Default value: `8080`
+
+#### options.debug
+* Type: `boolean`
+* Default value: `false`
+
+Prints additional data to the console
+
+#### options.ssl
+* Type: `ObjectJSON`
+* Default value: `undefined`
+
+To connect via SSL connection.
+
+[options ssl](https://nodejs.org/api/tls.html#tls_tls_createsecurecontext_options)
+
+```js
+ssl: { 
+  enable: true,
+    options: { 
+      key: './ssl/my.key',
+      cert: './ssl/my.crt'  
+  }               
+}
+```
+
+### Methods
+
+#### liveReload.run()
+Running the server
+
+#### liveReload.liveAlert(message)
+Call the alert panel on a web page. 
+
+\* The method in [live-alert-bp](https://github.com/Yuriy-Svetlov/live-alert-bp) has other name.
+
+`message` must be in the format (you can also look at [Browser plugin API](https://live-reload-browser-page.com/documentation)):
+
+```js
+[
+  { label: 'My label-1', message: 'My message-1.'}
+]
+```
+
+or
+
+```js
+[
+  {
+    label: {
+      style: { 
+        backgroundColor: '#ff0000', 
+        color: '#ffffff' 
+      }, 
+      name: 'Error'             
+    },
+    message: 'My message...'
+  }
+]
+```
+
+#### liveReload.resetError()
+Reset errors
+
+#### liveReload.hasError()
+Check errors
 
 ##  Browser plugin API
 
