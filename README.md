@@ -16,7 +16,7 @@ You may also want to use (In the Pro version of «Live Reload Browser Page», al
 
 **Step - 1** 
 
-You need to install the browser plugin [Live Reload Browser Page](https://live-reload-browser-page.com) if you have not already installed it for:
+You need to install the browser plugin [Live Reload Browser Page](https://live-reload-browser-page.com):
   * [Google Chrome](#)
   
 **Step - 2**
@@ -30,22 +30,22 @@ npm i live-reload-bp --save-dev
 
 ```javascript
 const 
-  liveReload = require("live-reload-bp");
+  LiveReload = require("live-reload-bp");
 
 const  
-  liveReloadMain = new liveReload({
+  liveReload = new LiveReload({
     host: '127.0.0.1',
     port: '8080'
   });
 
 // Run Server
-liveReloadMain.run();
+liveReload.run();
 
 console.log('Within 10 seconds, you need to connect to this server using the browser plugin «Live Reload Browser Page».');
 
 setTimeout(function(){
   // Full reload of the browser page
-  liveReloadMain.reloadPage();
+  liveReload.reloadPage();
 }, 10000);
 ```
 
