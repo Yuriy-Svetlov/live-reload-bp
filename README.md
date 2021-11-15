@@ -7,8 +7,8 @@ This module is for the browser plugin «[Live Reload Browser Page](https://live-
 [live-reload-browser-page.com](https://live-reload-browser-page.com)
 
 You may also want to use (In the Pro version of «Live Reload Browser Page», all these plugins are already built in): 
-* [live-alert-browser-page.com](https://live-alert-browser-page.com)
-* [live-html-validator.com](https://live-html-validator.com)
+* [Live Alert Browser Page](https://live-alert-browser-page.com)
+* [Live HTML Validator](https://live-html-validator.com)
 
 ![Live Reload Browser Page](https://raw.githubusercontent.com/Yuriy-Svetlov/live-reload-bp/main/images/main.png)
 
