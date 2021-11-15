@@ -18,7 +18,6 @@ You may also want to use (In the Pro version of «Live Reload Browser Page», al
 
 You need to install the browser plugin [Live Reload Browser Page](https://live-reload-browser-page.com) if you have not already installed it for:
   * [Google Chrome](#)
-  * Firefox (not yet available)
   
 **Step - 2**
 ```shell
