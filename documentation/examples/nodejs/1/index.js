@@ -4,14 +4,14 @@ const
   chokidar = require('chokidar'),
   express = require('express'),
   webServer = require('./web-server'),
-  liveReloadBP = require("live-reload-bp");
+  LiveReload = require("live-reload-bp");
 
 const
   destLiveReload = './dest/**/*.(js|css|php|html)',
   destLiveAlert = './tests/**/*.(js|css|php|html)';
 
 const  
-  liveReload = new liveReloadBP({
+  liveReload = new LiveReload({
     host: '127.0.0.1',
     port: '8080'
   });
@@ -38,6 +38,7 @@ chokidar.watch(destLiveAlert).on('change', (path) => {
     { label: 'My label-2', message: 'My message-2.'},
   ]);
 
+  liveReload.resetError();
 });
 
 webServer();

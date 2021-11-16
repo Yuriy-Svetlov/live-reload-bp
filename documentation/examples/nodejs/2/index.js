@@ -5,13 +5,13 @@ const
   express = require('express'),
   path = require('path'),
   webServer = require('./web-server'),
-  liveReloadBP = require("live-reload-bp");
+  LiveReload = require("live-reload-bp");
 
 const
   destLiveReload = './dest/**/*.(js|css|php|html)';
 
 const  
-  liveReload = new liveReloadBP({
+  liveReload = new LiveReload({
     host: '127.0.0.1',
     port: '8080'
   });
