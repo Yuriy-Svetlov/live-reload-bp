@@ -16,8 +16,10 @@ You may also want to use (In the Pro version of «Live Reload Browser Page», al
 
 **Step - 1** 
 
-You need to install the browser plugin [Live Reload Browser Page](https://live-reload-browser-page.com):
-  * [Google Chrome](#)
+You need to install the browser plugin [Live Reload Browser Page](https://live-reload-browser-page.com), choose the version you need:
+  * For Google Chrome:
+    * [Live Reload Browser Page](https://chrome.google.com/webstore/detail/live-reload-browser-page/ohidagfdjacdilgoklcmbjfkmplciemd)
+    * [Live Reload Browser Page (Pro)](https://chrome.google.com/webstore/detail/live-reload-browser-page/njclcjfoekkdmgdgdfdididdffpkcfgj)
   
 **Step - 2**
 ```shell
